@@ -14,4 +14,4 @@
 - **Proms search**: នៅពេលការបញ្ចូលពាក្យនៅក្នុង input ទទេរគឺ clear ទិន្ន័យដោយប្រើ !e.trim()
 - **error**: ប្រើបញ្ហាញ error នៅពេល api មានបញ្ហា ដោយប្រើជាមួយ try/catch method.
 ### image demo
-![alt](/public/searchDic.jpg)
+![search](/public/searchDic.jpg)
