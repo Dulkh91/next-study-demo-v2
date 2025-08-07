@@ -19,10 +19,14 @@ const MoivewList = () => {
         ? localStorage.getItem("guest_session_id")
         : null;
 
-    mutate([
-      `https://api.themoviedb.org/3/guest_session/${sessionId}/rated/movies?api_key=${USER_KEY}`,
-      TOKEN_KEY,
-    ]);
+    const key = [`https://api.themoviedb.org/3/guest_session/${sessionId}/rated/movies?api_key=${USER_KEY}`,
+      TOKEN_KEY,]
+
+    const testKey = [`https://api.themoviedb.org/3/guest_session/`,sessionId]
+
+  
+
+
   }, []);
 
   if (isLoading) return <p>Loading...</p>;

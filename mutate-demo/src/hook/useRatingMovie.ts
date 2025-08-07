@@ -31,7 +31,6 @@ export const useRatingMovie = () => {
   const URL = BASE_URL && guestSessionId && USER_KEY ?
     `${BASE_URL}/guest_session/${guestSessionId}/rated/movies?api_key=${USER_KEY}` : null;
     
-console.log(URL);
   const { data, isLoading, error } = useSWR<MovieApiResponse>(
     URL && TOKEN_KEY ? [URL, TOKEN_KEY] : null,
     fetcher

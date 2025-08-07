@@ -39,11 +39,9 @@ const DeleteBtn = ({ id }: { id: string }) => {
         guestSession: sessionId,
       });
 
-      mutate(
-        [
-          `https://api.themoviedb.org/3/guest_session/${sessionId}/rated/movies?api_key=${USER_KEY}`,
-          TOKEN_KEY,
-        ],
+      const key = [`https://api.themoviedb.org/3/guest_session/${sessionId}/rated/movies?api_key=${USER_KEY}`,TOKEN_KEY,]
+
+      mutate(key,
         (prev: MovieApiResponse | undefined): MovieApiResponse | undefined => {
           if (!prev) return prev;
 
